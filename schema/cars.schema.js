@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose")
 
-const Author = new Schema({
+const Cars = new Schema({
     marka: {
         type: String,
         required: [true, "marka kiritilishi shart"],
@@ -58,5 +58,5 @@ const Author = new Schema({
     }
 )
 
-const AuthorSchema = model("Author", Author)
-module.exports = AuthSchema
+const CarsSchema = model("Cars", Cars)
+module.exports = CarsSchema

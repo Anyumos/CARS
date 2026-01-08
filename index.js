@@ -1,11 +1,11 @@
 const express = require('express');
 const cors = require('cors');
 const connectDB = require('./config/db.config');
-const authorRouter = require('./router/author.routes');
 const errorMiddleware = require('./middleware/error.middleware');
 const authRouter = require('./router/auth.routes');
 require('dotenv').config();
 const cookieParser = require('cookie-parser');
+const carRouter = require('./router/cars.routes');
 
 
 const app = express();
@@ -20,7 +20,7 @@ connectDB();
 
 // router
 app.use(authRouter)
-app.use(authorRouter)
+app.use(carRouter)
 
 
 app.use(errorMiddleware)
